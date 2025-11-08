@@ -3,7 +3,7 @@ import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get/get.dart';
 import '../ball_charge/ball_charge_logic.dart';
 
-class TimeOutReload extends GetView<BallChargeLogic> {
+class AddBallMang extends GetView<BallChargeLogic> {
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class TimeOutReload extends GetView<BallChargeLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.emhc.value)),
+              url: WebUri.uri(Uri.parse(controller.mvdq.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

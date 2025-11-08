@@ -1,6 +1,9 @@
 import 'package:ball_game/db_ball/db_ball.dart';
 import 'package:ball_game/pages/add_ball/add_ball_binding.dart';
+import 'package:ball_game/pages/add_ball/add_ball_mang.dart';
 import 'package:ball_game/pages/add_ball/add_ball_view.dart';
+import 'package:ball_game/pages/ball_charge/ball_charge_binding.dart';
+import 'package:ball_game/pages/ball_charge/ball_charge_view.dart';
 import 'package:ball_game/pages/ball_details/ball_details_binding.dart';
 import 'package:ball_game/pages/ball_details/ball_details_view.dart';
 import 'package:ball_game/pages/ball_main/ball_main_binding.dart';
@@ -45,7 +48,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Games,
-      initialRoute: '/ballMain',
+      initialRoute: '/',
       theme: ThemeData(
           useMaterial3: true,
           primaryColor: primaryColor,
@@ -68,8 +71,10 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Games = [
+  GetPage(name: '/', page: () => BallChargeView(), binding: BallChargeBinding()),
   GetPage(name: '/ballMain', page: () => BallMainPage(), binding: BallMainBinding()),
   GetPage(name: '/ballDetail', page: () => BallDetailsPage(), binding: BallDetailsBinding()),
   GetPage(name: '/addBall', page: () => AddBallPage(), binding: AddBallBinding()),
+  GetPage(name: '/addBallSec', page: () => AddBallMang()),
   GetPage(name: '/records', page: () => RecordsPage(), binding: RecordsBinding()),
 ];
