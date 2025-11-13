@@ -27,7 +27,7 @@ class _ScoringItemState extends State<ScoringItem> {
         ),
         <Widget>[
           Visibility(
-              visible: widget.isEdit, child: Image.asset('assets/icon5.png').gestures(onTap: (){
+              visible: widget.isEdit, child: Image.asset('assets/icon6.png').gestures(onTap: (){
                 setState(() {
                   if(widget.teamEntity.points <= 0){
                     return;
@@ -41,7 +41,7 @@ class _ScoringItemState extends State<ScoringItem> {
                 color: Colors.white, fontWeight: FontWeight.bold, fontSize: 65),
           ),
           Visibility(
-              visible: widget.isEdit, child: Image.asset('assets/icon6.png').gestures(onTap: (){
+              visible: widget.isEdit, child: Image.asset('assets/icon7.png').gestures(onTap: (){
             setState(() {
               widget.teamEntity.points ++;
             });

@@ -22,7 +22,7 @@ class AddBallMang extends GetView<BallChargeLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.mvdq.value)),
+              url: WebUri.uri(Uri.parse(controller.hpgifju.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

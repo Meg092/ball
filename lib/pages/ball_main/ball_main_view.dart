@@ -27,7 +27,7 @@ class BallMainPage extends GetView<BallMainLogic> {
         const SizedBox(
           width: 10,
         ),
-        Image.asset('assets/icon7.png')
+        Image.asset('assets/icon8.png')
       ].toRow(),
     )
         .decorated(boxShadow: [
@@ -110,6 +110,7 @@ class BallMainPage extends GetView<BallMainLogic> {
               _item(2),
               _item(3),
               _item(4),
+              _item(5),
               const SizedBox(
                 height: 15,
               ),

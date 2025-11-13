@@ -55,7 +55,7 @@ class RecordsPage extends GetView<RecordsLogic> {
                       const SizedBox(
                         width: 10,
                       ),
-                      Image.asset('assets/icon7.png')
+                      Image.asset('assets/icon8.png')
                     ].toRow(),
                   )
                       .decorated(

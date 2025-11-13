@@ -31,7 +31,8 @@ List<String> ballTypes = [
   'Badminton scoring',
   'Football scoring',
   'Table tennis scoring',
-  'Volleyball scoring'
+  'Volleyball scoring',
+  'Custom scoring'
 ];
 
 void main() async {

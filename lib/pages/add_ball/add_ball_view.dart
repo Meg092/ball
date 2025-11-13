@@ -52,7 +52,7 @@ class AddBallPage extends GetView<AddBallLogic> {
                   Container(
                     width: double.infinity,
                     height: 60,
-                    child: <Widget>[Image.asset('assets/icon9.png')]
+                    child: <Widget>[Image.asset('assets/icon10.png')]
                         .toRow(mainAxisAlignment: MainAxisAlignment.center),
                   )
                       .decorated(

@@ -27,7 +27,7 @@ class _AddBallItemState extends State<AddBallItem> {
             'Team name',
             style: TextStyle(color: Color(0xff5f5f5f)),
           ),
-          Image.asset('assets/icon8.png').gestures(onTap: () {
+          Image.asset('assets/icon9.png').gestures(onTap: () {
             widget.deleteTap?.call();
           })
         ].toRow(mainAxisAlignment: MainAxisAlignment.spaceBetween),

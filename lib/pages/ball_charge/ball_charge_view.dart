@@ -10,7 +10,7 @@ class BallChargeView extends GetView<BallChargeLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.usfb.value
+          () => controller.ibrj.value
               ? const CircularProgressIndicator(color: Colors.orangeAccent)
               : buildError(),
         ),
@@ -25,7 +25,7 @@ class BallChargeView extends GetView<BallChargeLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.tyhmg();
+              controller.mixolt();
             },
             icon: const Icon(
               Icons.restart_alt,
